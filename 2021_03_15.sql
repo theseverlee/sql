@@ -327,18 +327,18 @@ WHERE job = 'SALESMAN'
 실습 12 풀면 좋고 못풀어도 ㄱㅊㄱ
 emp에서 w잡에서 세이즈맨 이거나 사번이 78로 시자ㄱ\하는 직원 조회
 SELECT *
-FROM emp
+FROM emp;
 WHere job = 'SALESMAN' 
         OR empno like '78%';
 
 -- \사번의 숫자를 문자열로 변경을 했겠구나~~ 
 
 과제 13
-emp emp에서 w잡에서 세이즈맨 이거나 사번이 78로 시자ㄱ\하는 직원 조회 ( 라이크 사용안하기)
+emp emp에서 w잡에서 세이즈맨 이거나 사번이 78로 시작하는 직원 조회 ( 라이크 사용안하기)
 SELECT *
 FROM emp
-WHere job = 'SALESMAN' 
-        OR empno in (78%);
+WHere job = 'SALESMAN'
+            or empno BETWEEN 7800 AND 7899;
 
 
 
