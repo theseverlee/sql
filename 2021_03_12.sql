@@ -1,5 +1,4 @@
 2021 03 12 금요일
-버츄얼
 
 파일과 dbms   구분
 
@@ -70,7 +69,7 @@ FROM member;
         -- NUMBER(7,2)자리수는 7자리이고 / 소수점은 2자리까지
         -- VARCHAR2(10 BYTE) 자바의 스트링 클래스와 같다 = VARCHAR2  / 10바이트 까지 저장할 수 있다.
 3. DESC 테이블명 ;
-        -- 전체적으로 볼수있다
+        -- 테이블명들 전체적으로 볼수있다
 DESC prod;   
 -- DESCRIBE 설명하다 = DESC
         -- 널? == 널값을 허용할거아 아니냐
@@ -154,8 +153,7 @@ FROM  emp;
 문자열 연산
 java : String msg = "Hello" + " world";
 
-SELECT empno + 10, ename  || '입니다',
-        concat(ename, ', 입니 다   d')
+SELECT empno + 10, ename  || '입니다', concat(ename, '입니다 ')
 FROM    emp;
 
 
@@ -175,7 +173,7 @@ concat : 결합하고 싶은 2개만  소괄호 컴마로 넣어준다.
 SELECT concat('아이디 :', userid),'아이디 :' || userid
 FROM users;
 
-SELECT TABLE_NAME
+SELECE *
 FROM user_tables;
 
 오라클에서 관리하는 테이블임 / 테이블이름 데이터임
