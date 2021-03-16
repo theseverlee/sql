@@ -338,8 +338,9 @@ emp emp에서 w잡에서 세이즈맨 이거나 사번이 78로 시작하는 직
 SELECT *
 FROM emp
 WHere job = 'SALESMAN'
-            or empno BETWEEN 7800 AND 7899;
-
+            or empno BETWEEN 7800 AND 7899
+            or empno BETWEEN 780 AND 789
+            or empno = 78;
 
 
 
