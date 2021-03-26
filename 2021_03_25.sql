@@ -54,9 +54,10 @@ EXISTS 서브쿼리 연산자: 단항연산자임
             ==> EXISTS  연산자와 사용되는 서브쿼리는 상호연관, 비상호연관 서브쿼리 둘다 사용 가능 ㅇㅇ
             ==> 행을 제한하기 위해서 상호연관 서브쿼리와 사용되는 경우가 일반적이다.
             -- 서ㅓ브쿼리에서 EXISTS 연산자를 만족하는 행이 하나라도 발견을 하면 더이상 진행하지 않고 효율적으로 일을 끊는다.
-            -- 서브쿼리가 1000건이여도 10번째 행에서 EXISTS 연산을 만족하는 행을 발견하면 나머지 990건 데이터는 확인도 안한다.
+            -- 서브쿼리가 1000건이여도 10번째 행에서 EXISTS 연산을 만족하는
+                            --행을 발견하면 나머지 990건 데이터는 확인도 안한다.
             
--- 매니져가 존재하는 직원
+-- 매니져가 존재하는 직원;
 SELECT *
 FROM EMP
 WHERE MGR IS NOT NULL;
@@ -93,6 +94,15 @@ WHERE NOT EXISTS ( SELECT 'X'
                 FROM CYCLE
                 WHERE CID =1
                     AND CYCLE.PID = PRODUCT.PID);
+
+SELECT *
+FROM PRODUCT
+WHERE NOT EXISTS ( SELECT 'X'
+                FROM CYCLE
+                WHERE CID = 1
+                AND CYCLE.PID = PRODUCT.PID);
+
+
 
 
 ---------------------------------------------------------
